@@ -7,8 +7,23 @@
     <title>Recipe Generator</title>
   </head>
   <body>
-    <h1>Welcome to the recipe generator!</h1>
-    <h2><em>Let's get cooking</em></h2>
+    <header>
+      <h1>Welcome to the recipe generator!</h1>
+      <h2><em>Let's get cooking</em></h2>
+    </header>
+    <form action="submit">
+      <input type="search" placeholder="Type Ingredients" required />
+      <button type="submit">Submit</button>
+      <div>
+        <input type="checkbox" name="vegan" id="vegan" />
+        <label for="vegan">vegan</label>
+        <input type="checkbox" name="gluten-free" id="gluten-free" />
+        <label for="gluten-free">gluten-free</label>
+        <input type="checkbox" name="nut-free" id="nut-free" />
+        <label for="nut-free">nut-free</label>
+      </div>
+    </form>
+    <div class="recipe">Recipe goes here</div>
     <footer>
       Code built by
       <a href="https://github.com/Vlove21" target="_blank">Vonnie Love</a> ,
