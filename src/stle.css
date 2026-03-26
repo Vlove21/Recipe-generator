@@ -1,10 +1,45 @@
 body {
-  background-color: bisque;
+  background-color: blanchedalmond;
   text-align: center;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  margin: 5% 10% 5% 20%;
+  padding: 20px 80px;
 }
 
 h1 {
   font-weight: 600;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
 }
 h2 {
+  padding-top: 0px;
+  margin-top: 0px;
+}
+.search {
+  font-size: 14px;
+}
+.search-bar {
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+.container {
+  display: block;
+  position: absolute;
+  background-color: aliceblue;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px 1px grey;
+}
+.recipe {
+  background-color: azure;
+  font-size: 18px;
+  margin-top: 20px;
+}
+footer {
+  margin-top: 20px;
+  font-size: 12px;
 }

@@ -7,14 +7,16 @@
     <title>Recipe Generator</title>
   </head>
   <body>
+    <div class="container">
     <header>
       <h1>Welcome to the recipe generator!</h1>
       <h2><em>Let's get cooking</em></h2>
     </header>
+    <div class="search-bar">
     <form action="submit">
-      <input type="search" placeholder="Type Ingredients" required />
-      <button type="submit">Submit</button>
-      <div>
+      <input type="search" placeholder="Type Ingredients" required  class="search"/>
+      <button type="submit" class="search">Submit</button>
+      <div class="check-box">
         <input type="checkbox" name="vegan" id="vegan" />
         <label for="vegan">vegan</label>
         <input type="checkbox" name="gluten-free" id="gluten-free" />
@@ -22,7 +24,9 @@
         <input type="checkbox" name="nut-free" id="nut-free" />
         <label for="nut-free">nut-free</label>
       </div>
+
     </form>
+    </div>
     <div class="recipe">Recipe goes here</div>
     <footer>
       Code built by
@@ -34,6 +38,7 @@
       and hosted on
       <a href="https://recipegene.netlify.app/" target="_blank">Netlify</a> .
     </footer>
+    </div>
   </body>
   <script src="src/script.js"></script>
 </html>
