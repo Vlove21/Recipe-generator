@@ -1,0 +1,25 @@
+function searchRecipe(event) {
+  event.preventDefault();
+  let search = document.querySelector("#search");
+  let ingredients = search.value;
+  let context =
+    "You are a michelin star chef who has cooked various cuisines from different cultures. You know how to put foods together to make a delicous and nutritous meal";
+  let prompt = `What is the best recipe to make with ${ingredients}?`;
+  let apiKey = "4tba4782084a6foabae1d06b62316bcd";
+  let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
+
+  axios.get(apiUrl).then(getRecipe);
+  alert("loading...");
+}
+
+function getRecipe(response) {
+  let recipe = response.data.answer;
+  new Typewriter("#recipe", {
+    strings: `${recipe}`,
+    autoStart: true,
+    cursor: "",
+  });
+}
+
+let searchForm = document.querySelector("#");
+searchForm.addEventListener("submit", searchRecipe);
