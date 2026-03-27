@@ -4,7 +4,7 @@ function searchRecipe(event) {
   let ingredients = search.value;
   let context =
     "You are a michelin star chef who has cooked various cuisines from different cultures. You know how to put foods together to make a delicous and nutritous meal";
-  let prompt = `What is the best recipe to make with ${ingredients}?`;
+  let prompt = `Write me a poem`;
   let apiKey = "4tba4782084a6foabae1d06b62316bcd";
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
