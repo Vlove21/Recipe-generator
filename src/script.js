@@ -9,10 +9,10 @@ function searchRecipe(event) {
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
   axios.get(apiUrl).then(getRecipe);
-  alert("loading...");
 }
 
 function getRecipe(response) {
+  alert("loading...");
   let recipe = response.data.answer;
   new Typewriter("#recipe", {
     strings: `${recipe}`,
