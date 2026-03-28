@@ -21,7 +21,10 @@ h2 {
 }
 .search {
   font-size: 14px;
+  padding: 10px;
+  border-radius: 15px;
 }
+
 .search-bar {
   margin-top: 20px;
   font-size: 15px;
@@ -39,11 +42,13 @@ h2 {
   font-size: 18px;
   margin-top: 20px;
   padding: 15px;
+  border: solid white;
+  border-radius: 10px;
 }
 footer {
   margin-top: 20px;
   font-size: 12px;
 }
-.hidden{
+.hidden {
   display: none;
 }
