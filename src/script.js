@@ -3,8 +3,8 @@ function searchRecipe(event) {
   let search = document.querySelector("#search");
   let ingredients = search.value;
   let context =
-    "You are a michelin star chef who has cooked various cuisines from different cultures. You know how to put various ingredients together to make a delicous and nutritous meal";
-  let prompt = `What recipe can I make with ${ingredients}? Please answer with  a list of recipes in html with the title of the recipe as h2, the ingredients as li,and the directions as numbered li `;
+    "Follow user instructions. You are a michelin star chef who has cooked various cuisines from different cultures. You know how to put various ingredients together to make a delicous and nutritous meal. Please answer with  a list of  3 recipes in html with the title of the recipe as <h4>, and the key ingredients in a bulleted list in <p>. Don't show the html and seperate each recipe with a line";
+  let prompt = `User Instructions: What recipes can I make with ${ingredients}?  `;
   let apiKey = "4tba4782084a6foabae1d06b62316bcd";
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
@@ -13,7 +13,8 @@ function searchRecipe(event) {
 }
 
 function getRecipe(response) {
-  let recipe = "Fried rice";
+  let recipe = response.data.answer;
+  console.log(`${response}`);
   let recipeSec = document.querySelector("#recipe");
   recipeSec.innerHTML = recipe;
   // new Typewriter("#recipe", {
