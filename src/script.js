@@ -7,9 +7,14 @@ function searchRecipe(event) {
   let prompt = `User Instructions: What recipes can I make with ${ingredients}?  `;
   let apiKey = "4tba4782084a6foabae1d06b62316bcd";
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
-
+  let recipeElement = document.querySelector("#recipe");
+  recipeElement.classList.remove("hidden");
   axios.get(apiUrl).then(getRecipe);
-  alert("loading...");
+  new Typewriter("#recipe", {
+    strings: `Generating recipes...`,
+    autoStart: true,
+    cursor: ".",
+  });
 }
 
 function getRecipe(response) {
@@ -17,11 +22,6 @@ function getRecipe(response) {
   console.log(`${response}`);
   let recipeSec = document.querySelector("#recipe");
   recipeSec.innerHTML = recipe;
-  // new Typewriter("#recipe", {
-  // strings: `${recipe}`,
-  // autoStart: true,
-  // cursor: "",
-  //});
 }
 
 let searchForm = document.querySelector("#search-bar");
