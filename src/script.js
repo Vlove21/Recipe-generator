@@ -13,7 +13,7 @@ function searchRecipe(event) {
 }
 
 function getRecipe(response) {
-  let recipe = response.data.answer;
+  let recipe = "Fried rice";
   let recipeSec = document.querySelector("#recipe");
   recipeSec.innerHTML = recipe;
   // new Typewriter("#recipe", {
